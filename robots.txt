@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: ttps://mimijanssen.github.io/sitemap.xml
+Sitemap: https://mimijanssen.github.io/sitemap.xml
