@@ -60,7 +60,7 @@ a {
   background-color: #ad8cff;
 /*  background-image: url("./me.jpeg");}
 */  
-  background-image: linear-gradient(120deg, #eaaae2, rgba(79, 176, 229, 0.728)); }
+  background-image: linear-gradient(120deg, #e8b8f3, rgba(151, 184, 255, 0.728)); }
 
 @media screen and (min-width: 64em) {
   .page-header {
