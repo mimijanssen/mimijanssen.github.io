@@ -306,13 +306,13 @@ a {
 
 .nav-menu a {
   font-size: 1em;         /* Larger text */
-  color: #68af7a;           /* Your requested color */
+  color: #686daf;           /* Your requested color */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s;
 }
 
 .nav-menu a:hover {
-  color: #3d8a53;           /* Optional: darker green on hover */
+  color: #686daf;           /* Optional: darker green on hover */
   text-decoration: underline;
 }
