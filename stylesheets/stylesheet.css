@@ -11,7 +11,7 @@ body {
 }
 
 a {
-  color: #2e7e56;
+  color: #99f27e;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -313,6 +313,6 @@ a {
 }
 
 .nav-menu a:hover {
-  color: #0d5d5e;           /* Optional: darker green on hover */
+  color: #3d8a53;           /* Optional: darker green on hover */
   text-decoration: underline;
 }
