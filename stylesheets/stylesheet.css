@@ -115,7 +115,7 @@ a {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159799; }
+  color: #76ca88; }
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {
@@ -305,7 +305,7 @@ a {
 }
 
 .nav-menu a {
-  font-size: 1.5em;         /* Larger text */
+  font-size: 1em;         /* Larger text */
   color: #68af7a;           /* Your requested color */
   text-decoration: none;
   font-weight: bold;
