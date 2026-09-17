@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Alte Haas Grotesk";
+  src: url("../fonts/AlteHaasGroteskRegular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Alte Haas Grotesk";
+  src: url("../fonts/AlteHaasGroteskBold.ttf") format("truetype");
+  font-weight: 700;
+}
+
 * {
   box-sizing: border-box; }
 
@@ -76,7 +88,10 @@ a {
 
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem; }
+  margin-bottom: 0.1rem;
+  font-family: "Alte Haas Grotesk", sans-serif;
+  font-weight: 700;
+}
 
 @media screen and (min-width: 64em) {
   .project-name {
