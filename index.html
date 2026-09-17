@@ -150,11 +150,28 @@
         text-decoration: underline;
       }
 
-      /* Keep the brain video responsive on phones */
-      .research-section video {
+      /* Brain video floats beside the research text on wider screens */
+      .research-video {
+        float: right;
+        width: 45%;
+        max-width: 320px;
+        margin: 0.3em 0 1em 2em;
+      }
+
+      .research-video video {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        border-radius: 6px;
+      }
+
+      /* Stop floating and stack full-width on small screens */
+      @media (max-width: 700px) {
+        .research-video {
+          float: none;
+          width: 100%;
+          max-width: 500px;
+          margin: 1.5em auto;
+        }
       }
 
       @media (max-width: 700px) {
@@ -199,7 +216,6 @@
       <nav class="top-nav-container">
         <ul class="top-nav-menu">
           <li><a href="pages/publications.html">Publications</a></li>
-          <li><a href="pages/teaching.html">Publications</a></li>
           <li><a href="pages/contact.html">Contact</a></li>
           <li><a href="files/cv.pdf">CV</a></li>
         </ul>
@@ -243,16 +259,15 @@
       <!-- RESEARCH SECTION -->
       <section class="research-section">
 
+        <h2>Research Questions</h2>
+
         <!-- Brain video -->
-        <div style="text-align: center; margin: 2em 0;">
-          <video autoplay loop muted playsinline
-                 style="width: 100%; max-width: 500px; border-radius: 6px;">
+        <div class="research-video">
+          <video autoplay loop muted playsinline>
             <source src="files/mouse_brain_rotation.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
-
-        <h2>Research Questions</h2>
 
         <h3>Are hippocampal replay events coupled with ventral striatal teaching signals?</h3>
 
@@ -304,7 +319,7 @@
           values non-linearly using a dynamic multi-armed bandit task.
         </p>
 
-        <h2>Research Motivation</h2>
+        <h2 style="clear: both;">Research Motivation</h2>
 
         <p>
           Mood disorders, including depression and post-traumatic stress disorder,
@@ -317,7 +332,7 @@
         </p>
 
         <p>
-          <a href="pages/publications.html">Learn more about my research →</a>
+          <a href="pages/research.html">Learn more about my research →</a>
         </p>
 
         <h2>Beyond Research</h2>
