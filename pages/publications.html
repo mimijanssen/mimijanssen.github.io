@@ -1,147 +1,407 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
+
   <head>
-    <meta charset="UTF-8">
-    <title>Publications</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/github-light.css" media="screen">
-    <!-- Font Awesome for PDF icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-      .publication-entry {
-        display: block;
-        margin-bottom: 1.5em;
-      }
-      .pdf-link {
-        margin-left: 0.5em;
-        color: #686daf;
-        text-decoration: none;
-        font-size: 1.1em;
-        vertical-align: middle;
-      }
-      .pdf-link:hover {
-        color: #686daf;
-      }
-      .top-nav-container {
-        background: inherit;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        margin: 0;
-        padding: 0.2em 0 0.2em 0;
-        min-height: 0.2em;
-      }
-      .top-nav-menu a {
-        color: #fff;
-        text-decoration: none;
-        font-family: "Alte Haas Grotesk", sans-serif;
-        font-weight: 700;
-        font-size: 1.22em;
-        letter-spacing: 0.02em;
-        transition: color 0.2s;
-        padding-bottom: 0.1em;
-      }
-      .top-nav-menu li {
-        margin: 0;
-        padding: 0;
-      }
-      
-      .top-nav-menu a:hover,
-      .top-nav-menu a:focus {
-        color: #e0e0e0;
-        text-decoration: underline;
-      }
-      @media (max-width: 700px) {
-        .top-nav-menu {
-          gap: 1em;
-          font-size: 1em;
-        }
-      }
-    </style>
+
+```
+<meta charset="UTF-8">
+
+<title>Publications | Miriam A. Janssen</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css"
+      href="../stylesheets/normalize.css"
+      media="screen">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+      rel="stylesheet"
+      type="text/css">
+
+<link rel="stylesheet" type="text/css"
+      href="../stylesheets/stylesheet.css"
+      media="screen">
+
+<link rel="stylesheet" type="text/css"
+      href="../stylesheets/github-light.css"
+      media="screen">
+
+<!-- Font Awesome for PDF icon -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+  /* Navigation */
+
+  .top-nav-container {
+    background: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0.2em 0 0.2em 0;
+    min-height: 0.2em;
+  }
+
+  .top-nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-nav-menu li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Alte Haas Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 1.22em;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+    padding-bottom: 0.1em;
+  }
+
+  .top-nav-menu a:hover,
+  .top-nav-menu a:focus {
+    color: #e0e0e0;
+    text-decoration: underline;
+  }
+
+
+  /* Publications */
+
+  .publications-section h2 {
+    font-size: 1.3em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .publication-entry {
+    display: block;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+  }
+
+  .pdf-link {
+    margin-left: 0.5em;
+    color: #686daf;
+    text-decoration: none;
+    font-size: 1.1em;
+    vertical-align: middle;
+  }
+
+  .pdf-link:hover {
+    color: #686daf;
+  }
+
+  .publications-section a {
+    color: #686daf;
+    text-decoration: none;
+  }
+
+  .publications-section a:hover {
+    text-decoration: underline;
+  }
+
+
+  /* Mobile formatting */
+
+  @media (max-width: 700px) {
+
+    .top-nav-menu {
+      gap: 1em;
+    }
+
+    .top-nav-menu a {
+      font-size: 1em;
+    }
+
+  }
+
+  @media (max-width: 600px) {
+
+    .top-nav-menu {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .top-nav-menu a {
+      display: block;
+      padding: 0.6em 0.2em;
+    }
+
+  }
+
+</style>
+```
+
   </head>
+
   <body>
-    <!-- HEADER -->
 
-    <section class="page-header">
+```
+<!-- HEADER -->
 
-      <h1 class="project-name">Miriam A. Janssen</h1>
+<section class="page-header">
 
-      <h2 class="project-tagline"></h2>
+  <h1 class="project-name">Miriam A. Janssen</h1>
 
-      <nav class="top-nav-container">
+  <h2 class="project-tagline"></h2>
 
-        <ul class="top-nav-menu">
+  <nav class="top-nav-container">
 
-          <li>
-            <a href="../index.html">About</a>
-          </li>
+    <ul class="top-nav-menu">
 
-          <li>
-            <a href="publications.html">Publications</a>
-          </li>
+      <li>
+        <a href="../index.html">About</a>
+      </li>
 
-          <li>
-            <a href="teaching.html">Teaching</a>
-          </li>
+      <li>
+        <a href="publications.html">Publications</a>
+      </li>
 
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
+      <li>
+        <a href="teaching.html">Teaching</a>
+      </li>
 
-          <li>
-            <a href="../files/cv.pdf">CV</a>
-          </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
 
-        </ul>
+      <li>
+        <a href="../files/cv.pdf">CV</a>
+      </li>
 
-      </nav>
+    </ul>
 
-    </section>
+  </nav>
 
-    <section class="main-content">
-      <h2>Journal Articles (Selected)</h2>
+</section>
 
-      <div class="publication-entry">
-        <strong>Janssen, M.A.</strong>, Chen, H.T., Tritsch, N.X., & van der Meer M.A.A. (2025) Ventral Striatal Dopamine Increases following Hippocampal Sharp-Wave Ripples. <em>bioRxiv.</em> DOI: <a href="https://doi.org/10.1101/2025.07.24.666687" target="_blank">10.1101/2025.03.29.646109</a>
-        <a class="pdf-link" href="../files/Janssen2025.pdf" target="_blank" title="View PDF"><span style="border:0.4px solid #686daf; color:#686daf; border-radius:3px; padding:1px 3px; font-size:0.9em; background:#fff;">PDF</span></a>      
-      </div>
 
-      <div class="publication-entry">
-        Taswell, C.A., <strong>Janssen, M.A.</strong> & Averbeck, B.B. (2023) The Motivational Role of the Ventral Striatum and Amygdala in Learning from Gains and Losses. <em>Behavioral Neuroscience.</em> DOI: <a href="https://doi.org/10.1037/bne0000558" target="_blank">10.64898/2026.07.24.740635</a>
-        <a class="pdf-link" href="../files/Taswell_Janssen_2023.pdf" target="_blank" title="View PDF"><span style="border:0.4px solid #686daf; color:#686daf; border-radius:3px; padding:1px 3px; font-size:0.9em; background:#fff;">PDF</span></a>
-      </div>
+<!-- MAIN CONTENT -->
 
-      <div class="publication-entry">
-        <strong>Janssen, M.A.*</strong>, LeWarne, C.*, Burk, D., & Averbeck, B.B. (2022) Hierarchical reinforcement learning, sequential behavior and the dorsal frontostriatal system. <em>Journal of Cognitive Neuroscience.</em> DOI: <a href="https://doi.org/10.1162/jocn_a_01869" target="_blank">10.1038/s44220-026-00610-y</a>
-        <a class="pdf-link" href="../files//Janssen2022.pdf" target="_blank" title="View PDF"><span style="border:0.4px solid #686daf; color:#686daf; border-radius:3px; padding:1px 3px; font-size:0.9em; background:#fff;">PDF</span></a>
-      </div>
-      <p><small>*Denotes equal contribution.</small></p>
+<section class="main-content publications-section">
 
-      <h2>Other Articles</h2>
-      
-      <div class="publication-entry">
-      <strong>Janssen, M.A.</strong>, 1% of your tax dollars goes to science. <em> Union Leader. </em> 
-      <a href="https://www.unionleader.com/opinion/op-eds/miriam-janssen-1-of-your-tax-dollar-goes-to-science/article_da4d7a90-fdf6-435d-8607-2750d148ad91.html" target="_blank">Op-ed</a>
-      <a class="pdf-link" href="../files/union.pdf" target="_blank" title="View PDF">
-        <span style="border:0.4px solid #686daf; color:#686daf; border-radius:3px; padding:1px 3px; font-size:0.9em; background:#fff;">PDF</span>
-      </a>
 
-      <div class="publication-entry">
-        <strong>Janssen, M.A.</strong>, Photos published in: Field Work: An Experiment on Striking STEM Research at Dartmouth College. <em> Long-Haul Magazine. </em> Link:  
-        <a href="https://longhaulmag.com/field-work-dartmouth/" target="_blank">Article</a>
-        <a class="pdf-link" href="../files/union.pdf" target="_blank" title="View PDF">
-          <span style="border:0.4px solid #686daf; color:#686daf; border-radius:3px; padding:1px 3px; font-size:0.9em; background:#fff;">PDF</span>
-        </a>
+  <!-- JOURNAL ARTICLES -->
 
-    </section>
+  <h2>Journal Articles (Selected)</h2>
 
-      </div>
-    <footer class="site-footer">
-      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>.</span>
-    </footer>
+
+  <div class="publication-entry">
+
+    <strong>Janssen, M.A.</strong>, Chen, H.T., Tritsch, N.X., &amp; van der Meer M.A.A. (2025)
+    Ventral Striatal Dopamine Increases following Hippocampal Sharp-Wave Ripples.
+    <em>bioRxiv.</em>
+
+    DOI:
+    <a href="https://doi.org/10.1101/2025.07.24.666687"
+       target="_blank">
+      10.1101/2025.07.24.666687
+    </a>
+
+    <a class="pdf-link"
+       href="../files/Janssen2025.pdf"
+       target="_blank"
+       title="View PDF">
+
+      <span style="border:0.4px solid #686daf;
+                   color:#686daf;
+                   border-radius:3px;
+                   padding:1px 3px;
+                   font-size:0.9em;
+                   background:#fff;">
+        PDF
+      </span>
+
+    </a>
+
+  </div>
+
+
+  <div class="publication-entry">
+
+    Taswell, C.A., <strong>Janssen, M.A.</strong> &amp; Averbeck, B.B. (2023)
+    The Motivational Role of the Ventral Striatum and Amygdala in Learning from Gains and Losses.
+    <em>Behavioral Neuroscience.</em>
+
+    DOI:
+    <a href="https://doi.org/10.1037/bne0000558"
+       target="_blank">
+      10.1037/bne0000558
+    </a>
+
+    <a class="pdf-link"
+       href="../files/Taswell_Janssen_2023.pdf"
+       target="_blank"
+       title="View PDF">
+
+      <span style="border:0.4px solid #686daf;
+                   color:#686daf;
+                   border-radius:3px;
+                   padding:1px 3px;
+                   font-size:0.9em;
+                   background:#fff;">
+        PDF
+      </span>
+
+    </a>
+
+  </div>
+
+
+  <div class="publication-entry">
+
+    <strong>Janssen, M.A.*</strong>, LeWarne, C.*, Burk, D., &amp; Averbeck, B.B. (2022)
+    Hierarchical reinforcement learning, sequential behavior and the dorsal frontostriatal system.
+    <em>Journal of Cognitive Neuroscience.</em>
+
+    DOI:
+    <a href="https://doi.org/10.1162/jocn_a_01869"
+       target="_blank">
+      10.1162/jocn_a_01869
+    </a>
+
+    <a class="pdf-link"
+       href="../files/Janssen2022.pdf"
+       target="_blank"
+       title="View PDF">
+
+      <span style="border:0.4px solid #686daf;
+                   color:#686daf;
+                   border-radius:3px;
+                   padding:1px 3px;
+                   font-size:0.9em;
+                   background:#fff;">
+        PDF
+      </span>
+
+    </a>
+
+  </div>
+
+
+  <p>
+    <small>*Denotes equal contribution.</small>
+  </p>
+
+
+  <!-- OTHER ARTICLES -->
+
+  <h2>Other Articles</h2>
+
+
+  <div class="publication-entry">
+
+    <strong>Janssen, M.A.</strong>,
+    1% of your tax dollars goes to science.
+    <em>Union Leader.</em>
+
+    <a href="https://www.unionleader.com/opinion/op-eds/miriam-janssen-1-of-your-tax-dollar-goes-to-science/article_da4d7a90-fdf6-435d-8607-2750d148ad91.html"
+       target="_blank">
+      Op-ed
+    </a>
+
+    <a class="pdf-link"
+       href="../files/union.pdf"
+       target="_blank"
+       title="View PDF">
+
+      <span style="border:0.4px solid #686daf;
+                   color:#686daf;
+                   border-radius:3px;
+                   padding:1px 3px;
+                   font-size:0.9em;
+                   background:#fff;">
+        PDF
+      </span>
+
+    </a>
+
+  </div>
+
+
+  <div class="publication-entry">
+
+    <strong>Janssen, M.A.</strong>,
+    Photos published in:
+    <em>Field Work: An Experiment on Striking STEM Research at Dartmouth College.</em>
+    <em>Long-Haul Magazine.</em>
+
+    Link:
+
+    <a href="https://longhaulmag.com/field-work-dartmouth/"
+       target="_blank">
+      Article
+    </a>
+
+    <a class="pdf-link"
+       href="../files/union.pdf"
+       target="_blank"
+       title="View PDF">
+
+      <span style="border:0.4px solid #686daf;
+                   color:#686daf;
+                   border-radius:3px;
+                   padding:1px 3px;
+                   font-size:0.9em;
+                   background:#fff;">
+        PDF
+      </span>
+
+    </a>
+
+  </div>
+
+
+  <!-- BACK TO HOME -->
+
+  <p style="margin-top: 3em;">
+
+    <a href="../index.html">
+      ← Back to home
+    </a>
+
+  </p>
+
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+  <span class="site-footer-credits">
+
+    This page was generated by
+
+    <a href="https://pages.github.com">
+      GitHub Pages
+    </a>
+
+    using the
+
+    <a href="https://github.com/jasonlong/cayman-theme">
+      Cayman theme
+    </a>.
+
+  </span>
+
+</footer>
+```
+
   </body>
+
 </html>
