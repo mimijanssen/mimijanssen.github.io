@@ -57,7 +57,7 @@ a {
 .page-header {
   color: #EAF1F5;
   text-align: center;
-  background-color: #4f6752;
+  background-color: #686daf;
 /*  background-image: url("./me.jpeg");}
 */  
   background-image: linear-gradient(120deg, #98c6a5, rgba(151, 184, 255, 0.728)); }
@@ -115,7 +115,7 @@ a {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #76ca88; }
+  color: #4f6752; }
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {
@@ -130,7 +130,7 @@ a {
   margin-top: 0;
   margin-bottom: 1rem;
   font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  color: #567482;
+  color: #686daf;
   word-wrap: normal;
   background-color: #EAF1F5;
   border: solid 1px #EAF1F5;
