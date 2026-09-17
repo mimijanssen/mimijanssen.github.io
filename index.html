@@ -15,6 +15,7 @@
         display: block;
         margin-bottom: 1.5em;
       }
+
       .pdf-link {
         margin-left: 0.5em;
         color: #159799;
@@ -22,9 +23,11 @@
         font-size: 1.1em;
         vertical-align: middle;
       }
+
       .pdf-link:hover {
         color: #0d5b5d;
       }
+
       .top-nav-container {
         background: inherit;
         width: 100%;
@@ -35,6 +38,7 @@
         padding: 0.2em 0 0.2em 0;
         min-height: 0.2em;
       }
+
       .top-nav-menu {
         display: flex;
         flex-direction: row;
@@ -43,10 +47,12 @@
         margin: 0;
         padding: 0;
       }
+
       .top-nav-menu li {
         margin: 0;
         padding: 0;
       }
+
       .top-nav-menu a {
         color: #fff;
         text-decoration: none;
@@ -57,27 +63,63 @@
         padding-bottom: 0.1em;
         font-family: Tahoma, Geneva, Verdana, sans-serif !important;
       }
+
       .top-nav-menu a:hover,
       .top-nav-menu a:focus {
         color: #e0e0e0;
         text-decoration: underline;
       }
-      @media (max-width: 700px) {
-        .top-nav-menu {
-          gap: 1em;
-          font-size: 1em;
-        }
+
+      /* Intro block: photo + bio side by side */
+      .intro-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2em;
+        margin-bottom: 1.5em;
       }
 
-      @media (max-width: 600px) {
-        .main-content > div[style*="flex-direction: row"] {
-          flex-direction: column !important;
-          align-items: center !important;
-          gap: 1.2em !important;
-        } 
-        .main-content p { text-align: left !important; }
-        .top-nav-menu a { display: block; padding: 0.6em 0.2em; }
-        .top-nav-menu { flex-wrap: wrap; justify-content: center; }
+      .intro-photo {
+        flex: 0 1 240px;
+        max-width: 240px;
+      }
+
+      .intro-photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+
+      .intro-text {
+        flex: 1 1 0;
+        min-width: 0;
+      }
+
+      .intro-text p {
+        text-align: justify;
+        margin-bottom: 0;
+      }
+
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5em 2em;
+        justify-content: center;
+        align-items: center;
+        margin: 2.5em 0 1.5em 0;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .social-links img {
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
       }
 
       .research-section h2 {
@@ -115,8 +157,41 @@
         margin-right: auto;
       }
 
+      @media (max-width: 700px) {
+        .top-nav-menu {
+          gap: 1em;
+          font-size: 1em;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .intro-block {
+          flex-direction: column;
+          align-items: center;
+          gap: 1.2em;
+        }
+
+        .intro-photo {
+          flex: 0 0 auto;
+        }
+
+        .main-content p {
+          text-align: left !important;
+        }
+
+        .top-nav-menu {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .top-nav-menu a {
+          display: block;
+          padding: 0.6em 0.2em;
+        }
+      }
     </style>
   </head>
+
   <body>
     <section class="page-header">
       <h1 class="project-name">Miriam A. Janssen</h1>
@@ -129,151 +204,168 @@
         </ul>
       </nav>
     </section>
+
     <section class="main-content">
-      <a id="hello-about-me" class="anchor" href="#hello-about-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link" align='right'></span></a>
-      <div style="display: flex; flex-direction: row; align-items: stretch; margin-bottom: 1.5em; gap: 2em;">
-        <div style="flex: 1 1 240px; display: flex; align-items: center; max-width: 320px;">
-          <img src="files/me.png" alt="hi" class="inline" width="100%" height="auto" style="border-radius: 4px; display: block; max-width: 240px; margin: 0 auto;"/>
+      <a id="hello-about-me" class="anchor" href="#hello-about-me" aria-hidden="true">
+        <span aria-hidden="true" class="octicon octicon-link" align="right"></span>
+      </a>
+
+      <!-- INTRO: photo + about me -->
+      <div class="intro-block">
+        <div class="intro-photo">
+          <img src="files/me.png" alt="Miriam A. Janssen" class="inline">
         </div>
-        <div style="flex: 3 1 0; min-width: 0;">
-          <p style="text-align: justify; margin-bottom: 0;">
-            I am a PhD candidate in the Psychological and Brain Sciences department at <a href="https://pbs.dartmouth.edu/">Dartmouth College </a> working with <a href="https://www.vandermeerlab.org/"> Dr. Matthijs van der Meer</a>. I'm interested in the various factors that shape learning, such as appetitive or affective experiences, particularly within the mesocorticolimbic system. Prior to Dartmouth College, I worked as a post-baccalaureate fellow under the mentorship of <a href="https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/ln/sldm">Dr. Bruno Averbeck </a> in the Section on Learning and Decision Making at the National Institute of Mental Health. 
-  
-            <br>
-            <br>For more information, please see my <a href="files/cv.pdf">CV</a>. 
-            <br>
 
-            <br> I am currently looking for a post-doctoral position! If you think our research interests align, please reach out via email! mimiajanssen[at]gmail[dot]com. 
-
+        <div class="intro-text">
+          <p>
+            I am a PhD candidate in the Psychological and Brain Sciences department at
+            <a href="https://pbs.dartmouth.edu/">Dartmouth College</a> working with
+            <a href="https://www.vandermeerlab.org/">Dr. Matthijs van der Meer</a>.
+            I'm interested in the various factors that shape learning, such as appetitive
+            or affective experiences, particularly within the mesocorticolimbic system.
+            Prior to Dartmouth College, I worked as a post-baccalaureate fellow under the
+            mentorship of
+            <a href="https://www.nimh.nih.gov/research/research-conducted-at-nimh/research-areas/clinics-and-labs/ln/sldm">Dr. Bruno Averbeck</a>
+            in the Section on Learning and Decision Making at the National Institute of
+            Mental Health.
+            <br>
+            <br>
+            For more information, please see my <a href="files/cv.pdf">CV</a>.
+            <br>
+            <br>
+            I am currently looking for a post-doctoral position! If you think our research
+            interests align, please reach out via email! mimiajanssen[at]gmail[dot]com.
           </p>
         </div>
-
-    <!-- RESEARCH SECTION -->
-    <section class="research-section">
-
-          <!-- Brain video -->
-    <div style="text-align: center; margin: 2em 0;">
-      <video autoplay loop muted playsinline
-            style="width: 100%; max-width: 500px; border-radius: 6px;">
-        <source src="files/mouse_brain_rotation.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <h2>Research Questions</h2>
-
-    <h3>Are hippocampal replay events coupled with ventral striatal teaching signals?</h3>
-
-    <p>
-        Motivated by a unifying computational theory where prioritized replay of
-        past experiences generates teaching signals to drive learning, my first
-        Ph.D. project sought to test these predictions within the brain. As an
-        initial step, I investigated the relationship between putative hippocampal
-        replay events, sharp-wave ripples (SWRs), and ventral striatal dopamine
-        teaching signals. Using microdrive recordings and fiber photometry, I
-        found that there is a transient increase in dopamine signals following
-        SWRs, suggesting that replay events and teaching signals are linked
-        together. My ongoing Ph.D. work is further testing a key prediction of
-        this computational framework: whether replay content determines the sign
-        of the teaching signal.
-      </p>
-
-
-      <h3>What are the properties of hippocampal ensemble encoding and reactivation of odor stimuli?</h3>
-
-      <p>
-        Typically, hippocampal encoding and subsequent reactivation have been
-        studied within the contiguous spatial domain. To extend this work to
-        discrete stimuli that can be more precisely controlled, we are using a
-        sequential odor task. By performing high-density recordings using
-        Neuropixel probes within the hippocampus, we aim to characterize
-        odor-specific hippocampal activity.
-      </p>
-
-
-      <h3>Is there a bias in the encoding and reactivation of valenced information across the dorsoventral hippocampal axis?</h3>
-
-      <p>
-        Given that the ventral hippocampus has strong anatomical connections with
-        the ventral striatum, which is associated with value processing, and the
-        amygdala, which is associated with emotional processing, we are
-        investigating whether the ventral hippocampus is more involved in the
-        processing of negatively valenced information compared with the dorsal
-        hippocampus. Because dorsal CA1 and ventral CA1 are functionally and
-        anatomically dissociated, I am investigating how the encoding and
-        reactivation of valenced odor stimuli and outcomes differ across the
-        dorsoventral hippocampal axis.
-      </p>
-
-
-      <h3>Are rats asymmetric value-learners?</h3>
-
-      <p>
-        In a collaboration with Dr. Catherine Holland, a postdoctoral researcher
-        at Yale University, and Dr. Eléonore Duvelle, a postdoctoral researcher
-        at the University of Glasgow, we are investigating whether rats learn
-        values non-linearly using a dynamic multi-armed bandit task.
-      </p>
-
-      <h2>Research Motivation</h2>
-
-    <p>
-        Mood disorders, including depression and post-traumatic stress disorder,
-        are frequently characterized by perseverative thoughts of negative past
-        events (i.e., rumination), potentially leading to a maladaptive bias
-        toward negative over positive replayed events. Identifying the
-        neurophysiological mechanisms underlying replay, and maladaptive replay,
-        may inform the development of more targeted treatments for mood disorders,
-        specifically targeting the mesocorticolimbic circuitry.
-      </p>
-
-      <p>
-        <a href="pages/research.html">Learn more about my research →</a>
-      </p>
-
-    <h2>Beyond Research</h2>
-
-      <p>
-        I deeply believe that your science is bettered when you engage with your
-        community. As a graduate student, I have had the privilege of being part
-        of the E.E. Just STEM community as a graduate fellow, which 1) aims to
-        support the discovery, dissemination, and application of scientific
-        knowledge and 2) strives to dismantle barriers rooted in the legacy of
-        American chattel slavery and colonialism to create a STEM ecosystem where
-        all scientists can thrive. This fellowship position is a dear part of my
-        research trajectory, and it continues to push me into leadership roles
-        where I feel not only an impact on my community, but also an impact on my
-        growth as a scientist.
-      </p>
-
-      <p>
-        <a href="pages/teaching.html">Learn more about teaching &amp; mentorship →</a>
-      </p>
-
       </div>
+
+      <!-- RESEARCH SECTION -->
+      <section class="research-section">
+
+        <!-- Brain video -->
+        <div style="text-align: center; margin: 2em 0;">
+          <video autoplay loop muted playsinline
+                 style="width: 100%; max-width: 500px; border-radius: 6px;">
+            <source src="files/mouse_brain_rotation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h2>Research Questions</h2>
+
+        <h3>Are hippocampal replay events coupled with ventral striatal teaching signals?</h3>
+
+        <p>
+          Motivated by a unifying computational theory where prioritized replay of
+          past experiences generates teaching signals to drive learning, my first
+          Ph.D. project sought to test these predictions within the brain. As an
+          initial step, I investigated the relationship between putative hippocampal
+          replay events, sharp-wave ripples (SWRs), and ventral striatal dopamine
+          teaching signals. Using microdrive recordings and fiber photometry, I
+          found that there is a transient increase in dopamine signals following
+          SWRs, suggesting that replay events and teaching signals are linked
+          together. My ongoing Ph.D. work is further testing a key prediction of
+          this computational framework: whether replay content determines the sign
+          of the teaching signal.
+        </p>
+
+        <h3>What are the properties of hippocampal ensemble encoding and reactivation of odor stimuli?</h3>
+
+        <p>
+          Typically, hippocampal encoding and subsequent reactivation have been
+          studied within the contiguous spatial domain. To extend this work to
+          discrete stimuli that can be more precisely controlled, we are using a
+          sequential odor task. By performing high-density recordings using
+          Neuropixel probes within the hippocampus, we aim to characterize
+          odor-specific hippocampal activity.
+        </p>
+
+        <h3>Is there a bias in the encoding and reactivation of valenced information across the dorsoventral hippocampal axis?</h3>
+
+        <p>
+          Given that the ventral hippocampus has strong anatomical connections with
+          the ventral striatum, which is associated with value processing, and the
+          amygdala, which is associated with emotional processing, we are
+          investigating whether the ventral hippocampus is more involved in the
+          processing of negatively valenced information compared with the dorsal
+          hippocampus. Because dorsal CA1 and ventral CA1 are functionally and
+          anatomically dissociated, I am investigating how the encoding and
+          reactivation of valenced odor stimuli and outcomes differ across the
+          dorsoventral hippocampal axis.
+        </p>
+
+        <h3>Are rats asymmetric value-learners?</h3>
+
+        <p>
+          In a collaboration with Dr. Catherine Holland, a postdoctoral researcher
+          at Yale University, and Dr. Eléonore Duvelle, a postdoctoral researcher
+          at the University of Glasgow, we are investigating whether rats learn
+          values non-linearly using a dynamic multi-armed bandit task.
+        </p>
+
+        <h2>Research Motivation</h2>
+
+        <p>
+          Mood disorders, including depression and post-traumatic stress disorder,
+          are frequently characterized by perseverative thoughts of negative past
+          events (i.e., rumination), potentially leading to a maladaptive bias
+          toward negative over positive replayed events. Identifying the
+          neurophysiological mechanisms underlying replay, and maladaptive replay,
+          may inform the development of more targeted treatments for mood disorders,
+          specifically targeting the mesocorticolimbic circuitry.
+        </p>
+
+        <p>
+          <a href="pages/research.html">Learn more about my research →</a>
+        </p>
+
+        <h2>Beyond Research</h2>
+
+        <p>
+          I deeply believe that your science is bettered when you engage with your
+          community. As a graduate student, I have had the privilege of being part
+          of the E.E. Just STEM community as a graduate fellow, which 1) aims to
+          support the discovery, dissemination, and application of scientific
+          knowledge and 2) strives to dismantle barriers rooted in the legacy of
+          American chattel slavery and colonialism to create a STEM ecosystem where
+          all scientists can thrive. This fellowship position is a dear part of my
+          research trajectory, and it continues to push me into leadership roles
+          where I feel not only an impact on my community, but also an impact on my
+          growth as a scientist.
+        </p>
+
+        <p>
+          <a href="pages/teaching.html">Learn more about teaching &amp; mentorship →</a>
+        </p>
+
+      </section>
+
+      <!-- SOCIAL LINKS -->
+      <div class="social-links">
+        <a href="https://github.com/mimijanssen" target="_blank" title="GitHub">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/miriam-janssen-62073883/" target="_blank" title="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="background: #fff;">
+        </a>
+        <a href="https://bsky.app/profile/mimijanssen.bsky.social" target="_blank" title="Bluesky">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg" alt="Bluesky" style="background: #fff;">
+        </a>
+        <a href="https://orcid.org/0000-0002-8468-1864" target="_blank" title="ORCID">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" style="background: #fff;">
+        </a>
+        <a href="https://scholar.google.com/citations?user=GX5acdcAAAAJ&amp;hl=en" target="_blank" title="Google Scholar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" style="background: #fff;">
+        </a>
+      </div>
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>
+          using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>
+          by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </span>
+      </footer>
     </section>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 1.5em 2em; justify-content: center; align-items: center; margin: 2.5em 0 1.5em 0;">
-      <a href="https://github.com/mimijanssen" target="_blank" title="GitHub" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="width: 36px; height: 36px; margin-right: 0.5em; border-radius: 6px;">
-      </a>
-      <a href="https://www.linkedin.com/in/miriam-janssen-62073883/" target="_blank" title="LinkedIn" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width: 36px; height: 36px; margin-right: 0.5em; border-radius: 6px; background: #fff;">
-      </a>
-      <a href="https://bsky.app/profile/mimijanssen.bsky.social" target="_blank" title="Bluesky" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bluesky_Logo.svg" alt="Bluesky" style="width: 36px; height: 36px; margin-right: 0.5em; border-radius: 6px; background: #fff;">
-      </a>
-      <a href="https://orcid.org/0000-0002-8468-1864" target="_blank" title="ORCID" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" style="width: 36px; height: 36px; margin-right: 0.5em; border-radius: 6px; background: #fff;">
-      </a>
-      <a href="https://scholar.google.com/citations?user=GX5acdcAAAAJ&hl=en" target="_blank" title="Google Scholar" style="display: flex; align-items: center; text-decoration: none;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" style="width: 36px; height: 36px; margin-right: 0.5em; border-radius: 6px; background: #fff;">
-      </a>
-      
-    </div>
-
-    <footer class="site-footer">
-      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-    </footer>
   </body>
 </html>
