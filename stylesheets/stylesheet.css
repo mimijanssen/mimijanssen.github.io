@@ -57,10 +57,10 @@ a {
 .page-header {
   color: #EAF1F5;
   text-align: center;
-  background-color: #4800ff;
+  background-color: #4f6752;
 /*  background-image: url("./me.jpeg");}
 */  
-  background-image: linear-gradient(120deg, #e9b7ff, rgba(151, 184, 255, 0.728)); }
+  background-image: linear-gradient(120deg, #bceac9, rgba(151, 184, 255, 0.728)); }
 
 @media screen and (min-width: 64em) {
   .page-header {
