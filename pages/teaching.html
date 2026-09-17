@@ -1,110 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
+
   <head>
+
     <meta charset="UTF-8">
-    <title>Software</title>
+
+    <title>Teaching & Mentorship | Miriam A. Janssen</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css" media="screen">
-    <!-- Remove Google Fonts, use Tahoma -->
-    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/github-light.css" media="screen">
+
+    <link rel="stylesheet" type="text/css"
+          href="../stylesheets/normalize.css"
+          media="screen">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+          rel="stylesheet"
+          type="text/css">
+
+    <link rel="stylesheet" type="text/css"
+          href="../stylesheets/stylesheet.css"
+          media="screen">
+
+    <link rel="stylesheet" type="text/css"
+          href="../stylesheets/github-light.css"
+          media="screen">
+
+
     <style>
-      body, .project-name, .project-tagline, .repo-title, .repo-desc, .top-nav-menu a, .pip-link {
-        font-family: Tahoma, Geneva, Verdana, sans-serif !important;
-      }
-      .repo-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2em;
-        list-style: none;
-        padding: 0;
-        margin: 2em 0;
-        justify-items: center;
-      }
-      @media (max-width: 800px) {
-        .repo-list {
-          grid-template-columns: 1fr;
-        }
-      }
-      .repo-card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background: #fff;
-        border: 1px solid #e1e4e8;
-        border-radius: 10px;
-        padding: 1.5em 1.5em 1.5em 1.5em;
-        min-width: 320px;
-        max-width: 600px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-        transition: box-shadow 0.2s, border-color 0.2s;
-        color: #111;
-      }
-      .repo-card:hover {
-        box-shadow: 0 6px 24px rgba(21,151,153,0.13);
-        border-color: #159799;
-      }
-      .repo-card img {
-        width: 110px;
-        height: 110px;
-        margin-right: 1.5em;
-        border-radius: 12px;
-        background: #fff;
-        border: 1px solid #e1e4e8;
-        object-fit: cover;
-        display: block;
-        flex-shrink: 0;
-      }
-      .repo-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1;
-      }
-      .repo-title {
-        font-size: 1.08em;
-        font-weight: 700;
-        margin-bottom: 0.4em;
-        color: #111;
-        text-decoration: none;
-        text-align: left;
-      }
-      .repo-title:hover {
-        text-decoration: underline;
-        color: #159799;
-      }
-      .repo-desc {
-        font-size: 0.92em;
-        color: #111;
-        margin-bottom: 0.2em;
-        margin-top: 0;
-        text-align: justify;
-        line-height: 1.5;
-      }
-      .pip-row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2em;
-        margin: 2.5em 0 1em 0;
-        flex-wrap: wrap;
-      }
-      .pip-link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-        color: #111;
-        font-size: 1em;
-      }
-      .pip-link:hover {
-        color: #159799;
-      }
-      .pip-badge {
-        margin-top: 0.5em;
-        margin-bottom: 0.2em;
-        height: 32px;
-      }
+
+      /* Navigation */
+
       .top-nav-container {
         background: inherit;
         width: 100%;
@@ -115,6 +41,7 @@
         padding: 0.2em 0 0.2em 0;
         min-height: 0.2em;
       }
+
       .top-nav-menu {
         display: flex;
         flex-direction: row;
@@ -123,10 +50,12 @@
         margin: 0;
         padding: 0;
       }
+
       .top-nav-menu li {
         margin: 0;
         padding: 0;
       }
+
       .top-nav-menu a {
         color: #fff;
         text-decoration: none;
@@ -137,97 +66,554 @@
         padding-bottom: 0.1em;
         font-family: Tahoma, Geneva, Verdana, sans-serif !important;
       }
+
       .top-nav-menu a:hover,
       .top-nav-menu a:focus {
         color: #e0e0e0;
         text-decoration: underline;
       }
+
+
+      /* Page content */
+
+      .teaching-section h2 {
+        font-size: 1.8em;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+      }
+
+      .teaching-section h3 {
+        font-size: 1.3em;
+        font-weight: 700;
+        margin-top: 1.8em;
+        margin-bottom: 0.8em;
+        line-height: 1.4;
+      }
+
+
+      /* Introductory quote */
+
+      .teaching-intro {
+        margin-bottom: 2.5em;
+      }
+
+      .teaching-intro p {
+        text-align: justify;
+      }
+
+      .teaching-quote {
+        font-size: 1.15em;
+        line-height: 1.7;
+        font-style: italic;
+        margin: 1.5em 1.5em 1.5em 1.5em;
+        padding-left: 1.2em;
+        border-left: 4px solid #159799;
+      }
+
+      .quote-attribution {
+        font-size: 0.95em;
+        font-style: normal;
+        margin-top: 0.8em;
+      }
+
+
+      /* Experience entries */
+
+      .experience-entry {
+        margin-bottom: 1.8em;
+      }
+
+      .experience-header {
+        margin-bottom: 0.35em;
+        line-height: 1.5;
+      }
+
+      .experience-title {
+        font-weight: 700;
+      }
+
+      .experience-date {
+        float: right;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+
+      .experience-course {
+        margin-top: 0.2em;
+        margin-bottom: 0.5em;
+      }
+
+      .experience-description {
+        margin-top: 0.5em;
+      }
+
+      .experience-description ul {
+        margin-top: 0.4em;
+      }
+
+      .experience-description li {
+        margin-bottom: 0.6em;
+      }
+
+
+      /* Award */
+
+      .award-entry {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding: 1em 1.2em;
+        border-left: 4px solid #159799;
+      }
+
+      .award-title {
+        font-weight: 700;
+      }
+
+
+      /* Links */
+
+      .teaching-section a {
+        color: #159799;
+        text-decoration: none;
+      }
+
+      .teaching-section a:hover {
+        text-decoration: underline;
+      }
+
+
+      /* Mobile formatting */
+
       @media (max-width: 700px) {
+
         .top-nav-menu {
           gap: 1em;
+        }
+
+        .top-nav-menu a {
           font-size: 1em;
         }
+
+        .experience-date {
+          float: none;
+          display: block;
+          margin-top: 0.2em;
+          font-size: 0.95em;
+        }
+
+        .teaching-intro p {
+          text-align: left;
+        }
+
+        .teaching-quote {
+          margin-left: 0.5em;
+          margin-right: 0.5em;
+        }
       }
+
+      @media (max-width: 600px) {
+
+        .top-nav-menu a {
+          display: block;
+          padding: 0.6em 0.2em;
+        }
+
+        .top-nav-menu {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+      }
+
     </style>
+
   </head>
+
+
   <body>
+
+    <!-- HEADER -->
+
     <section class="page-header">
-      <h1 class="project-name">Software</h1>
+
+      <h1 class="project-name">Miriam A. Janssen</h1>
+
       <h2 class="project-tagline"></h2>
+
       <nav class="top-nav-container">
+
         <ul class="top-nav-menu">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="../files/cv.pdf">CV</a></li>
+
+          <li>
+            <a href="../index.html">About</a>
+          </li>
+
+          <li>
+            <a href="publications.html">Publications</a>
+          </li>
+
+          <li>
+            <a href="teaching.html">Teaching</a>
+          </li>
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <li>
+            <a href="../files/cv.pdf">CV</a>
+          </li>
+
         </ul>
+
       </nav>
+
     </section>
-    <section class="main-content">
-      <ul class="repo-list">
-        <li class="repo-card">
-          <img src="../files/rep.png" alt="Representations for Biomarkers logo">
-          <div class="repo-info">
-            <a class="repo-title" href="https://github.com/ericabusch/RepBiomrkr" target="_blank">Representations for Biomarkers</a>
-            <p class="repo-desc">Repository for reproducible biomarker discovery in neuroimaging, with scripts, workflows, and tutorials for functional alignment and manifold learning approaches. Includes Google Colab notebook tutorials for working with provided simulated and sample fMRI data. Accompanies Busch et al., 2025 (in revision).</p>
+
+
+    <!-- MAIN CONTENT -->
+
+    <section class="main-content teaching-section">
+
+
+      <!-- INTRODUCTION -->
+
+      <div class="teaching-intro">
+
+        <h2>Teaching &amp; Mentorship</h2>
+
+        <p>
+          I deeply believe that science is strengthened when we engage with
+          and learn from our communities. I resonate strongly with the words
+          of Dr. Rita Colwell, distinguished microbiologist and former
+          director of the National Science Foundation, who wrote in her memoir
+          <em>A Lab of One's Own</em>:
+        </p>
+
+        <div class="teaching-quote">
+
+          “The best 100 percent of the population will always be better than
+          the best of 50 percent of the population.”
+
+          <div class="quote-attribution">
+            — Rita Colwell, <em>A Lab of One's Own</em>
           </div>
-        </li>
-        <li class="repo-card">
-          <img src="../files/eph.png" alt="Exogenous-PHATE analyses logo">
-          <div class="repo-info">
-            <a class="repo-title" href="https://github.com/ericabusch/manifold_abcd_psychopathology_bpcnni" target="_blank">Exogenous-PHATE analyses</a>
-            <p class="repo-desc">Analysis code and E-PHATE method; combining adolescent brain and environment features to predicting psychopathology development, as published in Biological Psychiatry: Cognitive Neuroscience and Neuroimaging (2024).</p>
-          </div>
-        </li>
-         <li class="repo-card">
-          <img src="../files/tph_img.png" alt="Temporal-PHATE analyses logo">
-          <div class="repo-info">
-            <a class="repo-title" href="https://github.com/ericabusch/tphate_analysis_capsule" target="_blank">Temporal-PHATE analyses</a>
-            <p class="repo-desc">Analysis code and tools for the T-PHATE manifold learning method for fMRI timeseries, as described in "Multi-view manifold learning of human brain-state trajectories" (Nature Computational Science, 2023).</p>
-          </div>
-        </li>
-        <li class="repo-card">
-          <img src="../files/game.png" alt="avatarRT Unity Task logo">
-          <div class="repo-info">
-            <a class="repo-title" href="https://github.com/ericabusch/avatarRT_task" target="_blank">avatarRT Unity Task</a>
-            <p class="repo-desc">Unity-based navigation game for fMRI, designed for the avatarRT project. Provides a customizable environment and video game for use with closed-loop experiments, designed in Unity3D (C#).</p>
-          </div>
-        </li>
-        <li class="repo-card">
-          <img src="../files/nfb.png" alt="Neurofeedback avatarRT Analyses logo">
-          <div class="repo-info">
-            <a class="repo-title" href="https://github.com/ericabusch/avatarRT_analysis" target="_blank">Neurofeedback avatarRT Analyses</a>
-            <p class="repo-desc">Analysis pipeline for AvatarRT real-time fMRI neurofeedback experiment, including rt-cloud interface, data preprocessing, neural and behavioral analyses, statistis, and visualization tools, to go with Busch et al., 2025 (biorxiv)</p>
-          </div>
-        </li>
-        <li class="repo-card">
-          <img src="../files/abcdha.png" alt="ABCD - Hyperalignment logo">
-          <div class="repo-info">
-            <a class="repo-title" href="https://github.com/ericabusch/ABCD_hyperalignment_JNeurosci" target="_blank">ABCD - Hyperalignment</a>
-            <p class="repo-desc">Analysis scripts and CHA implementation for measuring reliability, heritability, and predictivity of developing functional connectomes, as published in Journal of Neuroscience (2024).</p>
-          </div>
-        </li>
-        <li class="repo-card">
-          <img src="../files/h2a.png" alt="Hybrid Hyperalignment (H2A) logo">
-          <div class="repo-info">
-            <a class="repo-title" href="https://github.com/ericabusch/hybrid_hyperalignment_neuroimage" target="_blank">Hybrid Hyperalignment (H2A)</a>
-            <p class="repo-desc">Code for hybrid hyperalignment: a high-dimensional model of shared information in cortical patterns of response and functional connectivity, as published in NeuroImage (2021).</p>
-          </div>
-        </li>
-      </ul>
-      <div class="pip-row">
-        <a class="pip-link" href="https://pypi.org/project/TPHATE/" target="_blank">
-          TPHATE on PyPI
-          <img class="pip-badge" src="https://img.shields.io/pypi/v/TPHATE.svg?color=159799&label=pip%20install%20TPHATE&logo=pypi&logoColor=white" alt="TPHATE PyPI badge">
-        </a>
-        <a class="pip-link" href="https://pypi.org/project/EPHATE/" target="_blank">
-          EPHATE on PyPI
-          <img class="pip-badge" src="https://img.shields.io/pypi/v/EPHATE.svg?color=159799&label=pip%20install%20EPHATE&logo=pypi&logoColor=white" alt="EPHATE PyPI badge">
-        </a>
+
+        </div>
+
+        <p>
+          I strive to bring this philosophy into my teaching, mentorship, and
+          community engagement by creating opportunities for students to
+          develop scientific skills, see themselves as scientists, and
+          participate fully in the scientific community.
+        </p>
+
       </div>
+
+
+      <!-- TEACHING EXPERIENCE -->
+
+      <h2>Teaching Experience</h2>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-header">
+
+          <span class="experience-title">
+            Teaching Fellow, Psychological and Brain Sciences Department,
+            Dartmouth College, NH
+          </span>
+
+          <span class="experience-date">
+            Winter 2026
+          </span>
+
+        </div>
+
+        <div class="experience-course">
+          <em>Behavioral Neuroscience</em>
+        </div>
+
+      </div>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-header">
+
+          <span class="experience-title">
+            Teaching Fellow, Psychological and Brain Sciences Department,
+            Dartmouth College, NH
+          </span>
+
+          <span class="experience-date">
+            Spring 2025
+          </span>
+
+        </div>
+
+        <div class="experience-course">
+          <em>Systems Neuroscience Laboratory</em>
+        </div>
+
+      </div>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-header">
+
+          <span class="experience-title">
+            Teaching Fellow, Psychological and Brain Sciences Department,
+            Dartmouth College, NH
+          </span>
+
+          <span class="experience-date">
+            Fall 2024
+          </span>
+
+        </div>
+
+        <div class="experience-course">
+          <em>Systems Neuroscience Laboratory</em>
+        </div>
+
+      </div>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-header">
+
+          <span class="experience-title">
+            Teaching Assistant, Marine Biological Laboratory,
+            University of Chicago, Woods Hole, MA
+          </span>
+
+          <span class="experience-date">
+            Summer 2024
+          </span>
+
+        </div>
+
+        <div class="experience-course">
+          <em>Neural Systems and Behavior</em>
+        </div>
+
+      </div>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-header">
+
+          <span class="experience-title">
+            Teaching Fellow, Psychological and Brain Sciences Department,
+            Dartmouth College, NH
+          </span>
+
+          <span class="experience-date">
+            Winter 2024
+          </span>
+
+        </div>
+
+        <div class="experience-course">
+          <em>Introduction to Neuroscience</em>
+        </div>
+
+        <div class="experience-description">
+          Guest Lecture: Memory Systems
+        </div>
+
+      </div>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-header">
+
+          <span class="experience-title">
+            Teaching Assistant, Chemistry Department,
+            University of Maryland, College Park, MD
+          </span>
+
+          <span class="experience-date">
+            Fall 2017
+          </span>
+
+        </div>
+
+        <div class="experience-course">
+          <em>General Chemistry Laboratory</em>
+        </div>
+
+      </div>
+
+
+      <!-- TEACHING AWARD -->
+
+      <div class="award-entry">
+
+        <div class="award-title">
+          Marie A. Center 1982 Award for Excellence in Teaching
+        </div>
+
+        Dartmouth College, Psychological and Brain Sciences Department —
+        2025
+
+        <div style="margin-top: 0.5em;">
+          Course: <em>Systems Neuroscience</em>
+        </div>
+
+      </div>
+
+
+      <!-- MENTORSHIP -->
+
+      <h2>Mentorship Experience</h2>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-header">
+
+          <span class="experience-title">
+            E.E. Just STEM Community at Dartmouth College
+          </span>
+
+          <span class="experience-date">
+            Fall 2023–Present
+          </span>
+
+        </div>
+
+        <div class="experience-description">
+
+          <ul>
+
+            <li>
+              Near-peer mentor for undergraduates in the E.E. Just STEM
+              community, a STEM ecosystem for systemically excluded and
+              racialized minorities. Since my sustained mentorship, the
+              community has increased in participation by 60%.
+            </li>
+
+            <li>
+              Led a professional development series covering aspects of the
+              graduate school application process and workshopped student
+              applications and grant applications.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- COMMUNITY ENGAGEMENT -->
+
+      <h2>Community Engagement</h2>
+
+
+      <div class="experience-entry">
+
+        <div class="experience-header">
+
+          <span class="experience-title">
+            K–12 Outreach | Various Programs, Upper Valley, NH &amp; VT
+          </span>
+
+          <span class="experience-date">
+            2025–Present
+          </span>
+
+        </div>
+
+
+        <div class="experience-description">
+
+          <p>
+            Taught sheep brain dissections and human brain anatomy for:
+          </p>
+
+          <ul>
+
+            <li>
+              E.E. Just Dartmouth Adventures in STEM preorientation program
+              (2025)
+            </li>
+
+            <li>
+              Dartmouth's Discovery Program for high schoolers (2025)
+            </li>
+
+            <li>
+              Dartmouth's Science Day for the Upper Valley broader community
+              (2025)
+            </li>
+
+            <li>
+              Kingdom Career Connect for 7th and 8th grade students in the
+              rural Vermont Northeast Kingdom (2025 &amp; 2026)
+            </li>
+
+          </ul>
+
+
+          <p>
+            Presented a poster on neuroscience research and careers in
+            neuroscience for:
+          </p>
+
+          <ul>
+
+            <li>
+              Dartmouth's Science Day with Semillas to Science (2026)
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- BACK TO HOME -->
+
+      <p style="margin-top: 3em;">
+
+        <a href="../index.html">
+          ← Back to home
+        </a>
+
+      </p>
+
+
     </section>
+
+
+    <!-- FOOTER -->
+
     <footer class="site-footer">
-      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>.</span>
+
+      <span class="site-footer-credits">
+
+        This page was generated by
+        <a href="https://pages.github.com">GitHub Pages</a>
+        using the
+        <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>
+        by
+        <a href="https://twitter.com/jasonlong">Jason Long</a>.
+
+      </span>
+
     </footer>
+
+
   </body>
+
 </html>
